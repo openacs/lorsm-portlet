@@ -22,7 +22,7 @@ namespace eval lorsm_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-        return "LORS Management"
+        return "Learning Materials"
     }
 
     ad_proc -public link {
