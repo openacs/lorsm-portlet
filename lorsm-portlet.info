@@ -7,13 +7,13 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
     
-    <version name="0.4d" url="http://openacs.org/repository/download/apm/lorsm-portlet-0.3d.apm">
+    <version name="0.5d1" url="http://openacs.org/repository/download/apm/lorsm-portlet-0.3d.apm">
         <owner url="mailto:ErnieG@mm.st">Ernie Ghiglione</owner>
         <release-date>2004-06-19</release-date>
         <vendor url="http://www.openacs.org">OpenACS</vendor>
 
-        <provides url="lorsm-portlet" version="0.4d"/>
-        <requires url="lorsm" version="0.4d"/>
+        <provides url="lorsm-portlet" version="0.5d1"/>
+        <requires url="lorsm" version="0.5d1"/>
         <requires url="new-portal" version="0.1a"/>
 
         <callbacks>

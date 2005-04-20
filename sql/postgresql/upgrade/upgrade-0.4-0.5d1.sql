@@ -1,0 +1,1 @@
+update portal_element_map set pretty_name ='#lorsm-portlet.Learning_Materials#'  whe\re pretty_name = 'Learning Materials';
