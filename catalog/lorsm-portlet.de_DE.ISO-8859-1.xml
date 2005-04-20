@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="lorsm-portlet" package_version="0.4d" locale="de_DE" charset="ISO-8859-1">
+
+  <msg key="Add_a_Course">Einen Kurs hinzufügen</msg>
+  <msg key="lt_Search_Learning_Objec">Lernobjekt-Datenbank durchsuchen</msg>
+  <msg key="Manage_LORS">LORS administrieren</msg>
+</message_catalog>
