@@ -83,5 +83,4 @@ namespace eval lorsm_portlet {
             -config_list $cf \
             -template_src "lorsm-portlet"
     }
-
 }
