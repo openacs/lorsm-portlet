@@ -17,7 +17,7 @@ namespace eval lorsm_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-        return "[_ lorsm-portlet.lt_LORS_Management_Admin]"
+        return "#lorsm-portlet.lt_LORS_Management_Admin#"
     }
 
     ad_proc -private my_package_key {
