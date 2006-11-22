@@ -3,157 +3,154 @@
 -- Creates LORS Management portlet
 --
 -- @author Ernie Ghiglione (ErnieG@mm.st)
--- Adapted for Oracle by Mario Aguado <maguado@innova.uned.es>
--- @author Mario Aguado <maguado@innova.uned.es>
--- @creation-date 20/09/2006
+-- @creation-date 2004-04-10
 -- @cvs-id $Id$
 --
 
+create function inline_0 ()
+returns integer as '
 declare
   ds_id 	portal_datasources.datasource_id%TYPE;
 begin
-	ds_id := portal_datasource.new(
-			name => 'lorsm_portlet',
-			description => 'Displays a Folder_id'
+	ds_id = portal_datasource__new(
+        		''lorsm_portlet'',
+        		''Displays a Folder_id''
 	);
 
 
-	portal_datasource.set_def_param(
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'shadeable_p',
-		value => 't'
-	);
+perform  portal_datasource__set_def_param(
+		ds_id,
+		''t'',
+		''t'',
+		''shadeable_p'',
+		''t''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'hideable_p',
-		value => 't'
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''t'',
+		''hideable_p'',
+		''t''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'user_editable_p',
-		value => 'f'
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''t'',
+		''user_editable_p'',
+		''f''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'shaded_p',
-		value => 'f'
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''t'',
+		''shaded_p'',
+		''f''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'link_hideable_p',
-		value => 't'
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''t'',
+		''link_hideable_p'',
+		''t''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  't',
-		key => 'style',
-		value => 'list'
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''t'',
+		''style'',
+		''list''
+);
 
-	portal_datasource.set_def_param (
-		datasource_id => ds_id,
-		config_required_p => 't',
-	        configured_p =>  'f',
-		key => 'package_id',
-		value => ' '
-	);
+perform portal_datasource__set_def_param (
+		ds_id,
+		''t'',
+		''f'',
+		''package_id'',
+		'' ''
+);
 
-end; 
-/
-show errors;
+return 0;
 
-declare 
-	foo integer;
-begin
+end; ' language 'plpgsql';
+
+select inline_0 ();
+
+drop function inline_0 ();
+
 -- create the implementation
-	foo := acs_sc_impl.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_pretty_name => 'lorsm_portlet',
-			impl_owner_name	=> 'lorsm_portlet'
-		);
+select acs_sc_impl__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'lorsm_portlet'
+);
 
 
 -- add all the hooks
-	foo := 	acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'GetMyName',
-			impl_alias => 'lorsm_portlet::get_my_name',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'GetMyName',
+        'lorsm_portlet::get_my_name',
+        'TCL'
+);
 
-	foo := acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'GetPrettyName',
-			impl_alias => 'lorsm_portlet::get_pretty_name',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'GetPrettyName',
+        'lorsm_portlet::get_pretty_name',
+        'TCL'
+);
 
-	foo :=  acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'Link',
-			impl_alias => 'lorsm_portlet::link',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'Link',
+        'lorsm_portlet::link',
+        'TCL'
+);
 
-	foo := acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'AddSelfToPage',
-			impl_alias => 'lorsm_portlet::add_self_to_page',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'AddSelfToPage',
+        'lorsm_portlet::add_self_to_page',
+        'TCL'
+    );
 
-	foo :=  acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'Show',
-			impl_alias => 'lorsm_portlet::show',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'Show',
+        'lorsm_portlet::show',
+        'TCL'
+    );
 
-	foo := acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'Edit',
-			impl_alias => 'lorsm_portlet::edit',
-			impl_pl	=> 'TCL'
-		);
-        
-        foo := acs_sc_impl_alias.new(
-			impl_contract_name => 'portal_datasource',
-			impl_name => 'lorsm_portlet',
-			impl_operation_name => 'RemoveSelfFromPage',
-			impl_alias => 'lorsm_portlet::remove_self_from_page',
-			impl_pl	=> 'TCL'
-		);
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'Edit',
+        'lorsm_portlet::edit',
+        'TCL'
+    );
+
+select acs_sc_impl_alias__new(
+        'portal_datasource',
+        'lorsm_portlet',
+        'RemoveSelfFromPage',
+        'lorsm_portlet::remove_self_from_page',
+        'TCL'
+    );
 
     -- Add the binding
-	acs_sc_binding.new (
-		contract_name => 'portal_datasource',
-		impl_name => 'lorsm_portlet'
-	);
-end;
-/
-show errors;
+select acs_sc_binding__new (
+        'portal_datasource',
+        'lorsm_portlet'
+);
 
-@@ lorsm-admin-portlet-create.sql
+\i lorsm-admin-portlet-create.sql
