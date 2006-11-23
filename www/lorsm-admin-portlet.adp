@@ -1,26 +1,26 @@
 <if @use_lc_p@>
   <ul>
     <li>
-      <a href="@lors_central_url@">#lorsm-portlet.Manage_LORS#</a>
+      <a href="@lors_central_url@" title="#lorsm-portlet.Manage_LORS#">#lorsm-portlet.Manage_LORS#</a>
     </li>
     <li>
-      <a href="@lors_central_url@course-add">#lorsm-portlet.Add_a_Course#</a>
+      <a href="@lors_central_url@course-add" title="#lorsm-portlet.Add_a_Course#">#lorsm-portlet.Add_a_Course#</a>
     </li>
     <li>
-      <a href="/search">#lorsm-portlet.lt_Search_Learning_Objec#</a>
+      <a href="/search" title="#lorsm-portlet.lt_Search_Learning_Objec#">#lorsm-portlet.lt_Search_Learning_Objec#</a>
     </li>
   </ul>
 </if>
 <else>
 <ul>
   <li>
-    <a href="@url@">#lorsm-portlet.Manage_LORS#</a>
+    <a href="@url@" title="#lorsm-portlet.Manage_LORS#">#lorsm-portlet.Manage_LORS#</a>
   </li>
   <li>
-    <a href="@url@/course-add">#lorsm-portlet.Add_a_Course#</a>
+    <a href="@url@/course-add" title="#lorsm-portlet.Add_a_Course#">#lorsm-portlet.Add_a_Course#</a>
   </li>
   <li>
-    <a href="/search">#lorsm-portlet.lt_Search_Learning_Objec#</a>
+    <a href="/search" title="#lorsm-portlet.lt_Search_Learning_Objec#">#lorsm-portlet.lt_Search_Learning_Objec#</a>
   </li>
 </ul>
 </else>
