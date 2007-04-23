@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="lorsm-portlet" package_version="2.2.0" locale="pt_BR" charset="ISO-8859-1">
+<message_catalog package_key="lorsm-portlet" package_version="2.3.0" locale="pt_BR" charset="ISO-8859-1">
 
   <msg key="Add_a_Course">Adicionar um Curso</msg>
   <msg key="Learning_Materials">Materiais de Aprendizagem</msg>
