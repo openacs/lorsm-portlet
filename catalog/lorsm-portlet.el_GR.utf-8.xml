@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="lorsm-portlet" package_version="2.3.0" locale="el_GR" charset="utf-8">
+<message_catalog package_key="lorsm-portlet" package_version="2.3.1" locale="el_GR" charset="utf-8">
 
+  <msg key="Add_a_Course">Προσθήκη μαθήματος</msg>
   <msg key="Learning_Materials">Εκπαιδευτικό Υλικό</msg>
+  <msg key="lt_LORS_Management_Admin">Διαχείριση LORS</msg>
+  <msg key="lt_Search_Learning_Objec">Αναζήτηση αποθήκης αντικειμένων εκπαίδευσης </msg>
+  <msg key="Manage_LORS">Διαχείριση LORS</msg>
 </message_catalog>
