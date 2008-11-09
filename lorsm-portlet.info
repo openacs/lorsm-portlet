@@ -9,7 +9,7 @@
     
     <version name="2.5.0d1" url="http://openacs.org/repository/download/apm/lorsm-portlet-2.5.0d1.apm">
         <owner url="mailto:ErnieG@mm.st">Ernie Ghiglione</owner>
-        <release-date>2008-09-16</release-date>
+        <release-date>2008-10-18</release-date>
         <vendor url="http://www.openacs.org">OpenACS</vendor>
 
         <provides url="lorsm-portlet" version="2.5.0d1"/>
