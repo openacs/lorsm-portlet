@@ -15,20 +15,24 @@ namespace eval lorsm_portlet {
         return "lorsm_portlet"
     }
 
+
     ad_proc -private my_package_key {
     } {
         return "lorsm-portlet"
     }
+
 
     ad_proc -public get_pretty_name {
     } {
         return "#lorsm-portlet.Learning_Materials#"
     }
 
+
     ad_proc -public link {
     } {
         return ""
     }
+
 
     ad_proc -public add_self_to_page {
         {-portal_id:required}
@@ -52,8 +56,7 @@ namespace eval lorsm_portlet {
             -force_region [parameter::get_from_package_key \
                                -package_key [my_package_key] \
                                -parameter "lorsm_portlet_force_region"] \
-            -param_action $param_action
-        ]
+            -param_action $param_action]
     }
 
     ad_proc -public remove_self_from_page {
@@ -73,6 +76,7 @@ namespace eval lorsm_portlet {
             -key package_id \
             -value $package_id
     }
+
 
     ad_proc -public show {
         cf

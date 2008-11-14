@@ -15,20 +15,24 @@ namespace eval lorsm_admin_portlet {
         return "lorsm_admin_portlet"
     }
 
+
     ad_proc -public get_pretty_name {
     } {
         return "[_ lorsm-portlet.lt_LORS_Management_Admin]"
     }
+
 
     ad_proc -private my_package_key {
     } {
         return "lorsm-portlet"
     }
 
+
     ad_proc -public link {
     } {
         return ""
     }
+
 
     ad_proc -public add_self_to_page {
         {-portal_id:required}
@@ -43,12 +47,12 @@ namespace eval lorsm_admin_portlet {
         @return element_id The new element's id
     } {
         return [portal::add_element_parameters \
-            -portal_id $portal_id \
-            -portlet_name [get_my_name] \
-            -key package_id \
-            -value $package_id
-        ]
+                    -portal_id $portal_id \
+                    -portlet_name [get_my_name] \
+                    -key package_id \
+                    -value $package_id]
     }
+
 
     ad_proc -public remove_self_from_page {
         portal_id
@@ -57,6 +61,7 @@ namespace eval lorsm_admin_portlet {
     } {
         portal::remove_element -portal_id $portal_id -portlet_name [get_my_name]
     }
+
 
     ad_proc -public show {
         cf
@@ -67,5 +72,4 @@ namespace eval lorsm_admin_portlet {
             -config_list $cf \
             -template_src "lorsm-admin-portlet"
     }
-
 }
