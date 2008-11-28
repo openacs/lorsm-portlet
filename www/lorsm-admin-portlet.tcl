@@ -14,7 +14,9 @@ set lors_central_package_id [apm_package_id_from_key "lors-central"]
 set lors_central_url [apm_package_url_from_id $lors_central_package_id]
 
 if { ![string equal $lors_central_package_id 0] } {
-    set use_lc_p [parameter::get -parameter "UploadUsingLorsCentralP" -package_id $lors_central_package_id]
+    set use_lc_p [parameter::get \
+                    -parameter "UploadUsingLorsCentralP" \
+                    -package_id $lors_central_package_id]
 } else {
     set use_lc_p 0
 }
