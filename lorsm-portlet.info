@@ -7,12 +7,12 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
     
-    <version name="2.5.0d2" url="http://openacs.org/repository/download/apm/lorsm-portlet-2.5.0d2.apm">
+    <version name="2.5.0" url="http://openacs.org/repository/download/apm/lorsm-portlet-2.5.0.apm">
         <owner url="mailto:ErnieG@mm.st">Ernie Ghiglione</owner>
-        <release-date>2008-10-18</release-date>
+        <release-date>2009-07-22</release-date>
         <vendor url="http://www.openacs.org">OpenACS</vendor>
 
-        <provides url="lorsm-portlet" version="2.5.0d2"/>
+        <provides url="lorsm-portlet" version="2.5.0"/>
         <requires url="lorsm" version="0.9d2"/>
         <requires url="new-portal" version="2.4.1b1"/>
 
